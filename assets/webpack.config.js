@@ -79,13 +79,21 @@ module.exports = (env) => {
             fallback: "style-loader",
             use: ["css-loader", "postcss-loader"]
           })
+        },
+
+        {
+          test: /\.vue$/,
+          loader: "vue-loader"
         }
       ]
     },
 
     resolve: {
       modules: ["node_modules", __dirname],
-      extensions: [".js", ".css"]
+      extensions: [".js", ".css", ".vue"],
+      alias: {
+        vue: "vue/dist/vue.js"
+      }
     },
 
     plugins: [

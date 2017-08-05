@@ -19,3 +19,11 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+import Vue from "vue";
+import App from "./MainApp";
+
+new Vue({
+  el: "#app",
+  template: "<App />",
+  components: { App }
+});
